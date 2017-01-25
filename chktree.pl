@@ -1,4 +1,4 @@
-#!perl -w
+#!perl
 # chktree.pl
 # My 2004-04-22, 2006-01-15, 2010-10-18, 2017-01-25
 
@@ -6,7 +6,7 @@
 # Einsatz von "bigint" fuehrte zu Fehlern!
 
 $PROGRAM   = 'chktree.pl';
-$VERSION   = 'v0.50';
+$VERSION   = 'v0.51';
 $DESCRPT   = '';
 
 $STARTPFAD = '';
@@ -31,8 +31,7 @@ sub usage {
           "\t-1\tNur ein Verzeichnis tief anzeigen (Vorgabe)\n",
           "\t-2\tZwei Verzeichnisse tief anzeigen\n",
           "\t-3\tDrei Verzeichnisse tief anzeigen\n",
-          "\t-4\tVier Verzeichnisse tief anzeigen\n",
-          "\t-5\tFuenf Verzeichnisse tief anzeigen\n",
+          "\t-4\tVier Verzeichnisse tief anzeigen ... bis 9\n",
           "\t-e\tWeitere Angaben sind regulaere Ausdruecke\n",
           "\t-h\tHilfeseite anzeigen\n",
           "\t-i\tMuster zum Ignorieren\n",
@@ -215,11 +214,7 @@ print $PROGRAM, $trenn, $VERSION, "\n\n";
 
 foreach (@ARGV) {
     if (substr($_, 0, 1) eq '-') {
-        m/1/ && ($AUSWTIEFE = 1);
-        m/2/ && ($AUSWTIEFE = 2);
-        m/3/ && ($AUSWTIEFE = 3);
-        m/4/ && ($AUSWTIEFE = 4);
-        m/5/ && ($AUSWTIEFE = 5);
+        m/\d+/ && ($AUSWTIEFE = $&);
         m/e/ && ($REGEXNEXT = 1);
         m/h|\?/ && &usage();
         m/i/ && ($IGNORNEXT = 1);
