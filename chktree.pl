@@ -34,6 +34,7 @@ sub usage {
           "\t-2\tZwei Verzeichnisse tief anzeigen\n",
           "\t-3\tDrei Verzeichnisse tief anzeigen\n",
           "\t-4\tVier Verzeichnisse tief anzeigen\n",
+          "\t-5\tFuenf Verzeichnisse tief anzeigen\n",
           "\t-e\tWeitere Angaben sind regulaere Ausdruecke\n",
           "\t-h\tHilfeseite anzeigen\n",
           "\t-i\tMuster zum Ignorieren\n",
@@ -220,6 +221,7 @@ foreach (@ARGV) {
         m/2/ && ($AUSWTIEFE = 2);
         m/3/ && ($AUSWTIEFE = 3);
         m/4/ && ($AUSWTIEFE = 4);
+        m/5/ && ($AUSWTIEFE = 5);
         m/e/ && ($REGEXNEXT = 1);
         m/h|\?/ && &usage();
         m/i/ && ($IGNORNEXT = 1);
