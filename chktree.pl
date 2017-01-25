@@ -1,6 +1,8 @@
-#!perl
+#!perl -w
 # chktree.pl
-# My 2004-04-22, 2006-01-15, 2010-10-18, 2017-01-18
+# My 2004-04-22, 2006-01-15, 2010-10-18, 2017-01-25
+
+# Neuer Branch.
 
 # use bigint;
 # Einsatz von "bigint" fuehrte zu Fehlern!
