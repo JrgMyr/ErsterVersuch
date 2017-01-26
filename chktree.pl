@@ -1,6 +1,6 @@
 #!perl
 # chktree.pl
-# My 2004-04-22, 2006-01-15, 2010-10-18, 2017-01-18, 2017-01-25
+# My 2004-04-22, 2006-01-15, 2010-10-18, 2017-01-25
 
 # use bigint;
 # Einsatz von "bigint" fuehrte zu Fehlern!
