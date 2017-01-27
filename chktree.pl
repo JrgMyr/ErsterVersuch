@@ -6,7 +6,7 @@
 # Einsatz von "bigint" fuehrte zu Fehlern!
 
 $PROGRAM   = 'chktree.pl';
-$VERSION   = 'v0.51';
+$VERSION   = 'v0.52';
 $DESCRPT   = '';
 
 $STARTPFAD = '';
@@ -30,8 +30,7 @@ sub usage {
           "Parameter:\n",
           "\t-1\tNur ein Verzeichnis tief anzeigen (Vorgabe)\n",
           "\t-2\tZwei Verzeichnisse tief anzeigen\n",
-          "\t-3\tDrei Verzeichnisse tief anzeigen\n",
-          "\t-4\tVier Verzeichnisse tief anzeigen ... bis 9\n",
+          "\t-<n>\t<n> Verzeichnisse tief anzeigen, fuer beliebiges <n>\n",
           "\t-e\tWeitere Angaben sind regulaere Ausdruecke\n",
           "\t-h\tHilfeseite anzeigen\n",
           "\t-i\tMuster zum Ignorieren\n",
