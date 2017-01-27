@@ -1,13 +1,13 @@
 #!perl
 # chktree.pl
-# My 2004-04-22, 2006-01-15, 2010-10-18, 2017-01-25
+# My 2004-04-22, 2006-01-15, 2010-10-18, 2017-01-18, 2017-01-26
 
 # use bigint;
 # Einsatz von "bigint" fuehrte zu Fehlern!
 
 $PROGRAM   = 'chktree.pl';
-$VERSION   = 'v0.51';
-$DESCRPT   = '';
+$VERSION   = 'v0.53';
+$DESCRPT   = 'Baumstruktur aufaddieren und Extremwerte finden';
 
 $STARTPFAD = '';
 @STARTAUSW = ();
@@ -30,8 +30,7 @@ sub usage {
           "Parameter:\n",
           "\t-1\tNur ein Verzeichnis tief anzeigen (Vorgabe)\n",
           "\t-2\tZwei Verzeichnisse tief anzeigen\n",
-          "\t-3\tDrei Verzeichnisse tief anzeigen\n",
-          "\t-4\tVier Verzeichnisse tief anzeigen ... bis 9\n",
+          "\t-<n>\t<n> Verzeichnisse tief anzeigen, fuer beliebiges <n>\n",
           "\t-e\tWeitere Angaben sind regulaere Ausdruecke\n",
           "\t-h\tHilfeseite anzeigen\n",
           "\t-i\tMuster zum Ignorieren\n",
@@ -44,7 +43,7 @@ sub usage {
 }
 
 sub version {
-    print $PROGRAM, $trenn, $VERSION, "\n",
+    print 'Version', $trenn, $VERSION, "\n",
           $DESCRPT, "\n";
     exit;
 }
@@ -210,7 +209,7 @@ sub ScanDir {
     return 1;
 }
 
-print $PROGRAM, $trenn, $VERSION, "\n\n";
+print $PROGRAM, "\n\n";
 
 foreach (@ARGV) {
     if (substr($_, 0, 1) eq '-') {
