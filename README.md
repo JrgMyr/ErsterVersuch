@@ -6,4 +6,4 @@ Die Datei exisitiert schon.
 Allerdings geht dieser blöde Dialog nicht weg.
 
 Noch ein Nachtrag
-Jetzt ist der blöde Dialog endlich weg.
+Jetzt ist der Dialog endlich weg.
